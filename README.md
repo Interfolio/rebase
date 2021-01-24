@@ -1,7 +1,5 @@
 # GitHub action to automatically rebase PRs
 
-[![Build Status](https://api.cirrus-ci.com/github/cirrus-actions/rebase.svg)](https://cirrus-ci.com/github/cirrus-actions/rebase) [![](https://images.microbadger.com/badges/version/cirrusactions/rebase.svg)](https://microbadger.com/images/cirrusactions/rebase) [![](https://images.microbadger.com/badges/image/cirrusactions/rebase.svg)](https://microbadger.com/images/cirrusactions/rebase)
-
 After installation simply comment `/rebase` to trigger the action:
 
 ![rebase-action](https://user-images.githubusercontent.com/989066/51547853-14a57b00-1e35-11e9-841d-33114f0f0bd5.gif)
@@ -27,7 +25,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
       - name: Automatic Rebase
-        uses: cirrus-actions/rebase@1.4
+        uses: Interfolio/rebase@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -45,7 +43,7 @@ Example
         token: ${{ secrets.PAT_TOKEN }}
         fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
     - name: Automatic Rebase
-      uses: cirrus-actions/rebase@1.4
+      uses: Interfolio/rebase@latest
       env:
         GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 ```
